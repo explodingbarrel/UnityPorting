@@ -10,6 +10,7 @@ namespace System.Net
 		{
 			public static bool TryParse(string h, out IPAddress p)
 			{
+				throw new NotImplementedException();
 				p = new IPAddress;
 				return false;
 			}
@@ -19,10 +20,12 @@ namespace System.Net
 		{
 			public static System.IAsyncResult BeginGetHostAddresses(string h, System.AsyncCallback cb, Object state)
 			{
+				throw new NotImplementedException();
 				return null;
 			}
 			public static IPAddress[] EndGetHostAddresses(System.IAsyncResult asyncResult)
 			{
+				throw new NotImplementedException();
 				return new IPAddress[0];
 			}
 		}

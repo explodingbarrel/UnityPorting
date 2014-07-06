@@ -53,6 +53,7 @@
     <Compile Include="Legacy\System\IO\File.cs" />
     <Compile Include="Legacy\System\MissingExtensions.cs" />
     <Compile Include="Legacy\System\Net\IPAddress.cs" />
+    <Compile Include="Legacy\System\Net\Sockets\NetworkStream.cs" />
     <Compile Include="Legacy\System\Net\Sockets\TcpClient.cs" />
     <Compile Include="Legacy\System\ReflectionExtensions.cs" />
     <Compile Include="Legacy\System\Threading\Thread.cs" />
