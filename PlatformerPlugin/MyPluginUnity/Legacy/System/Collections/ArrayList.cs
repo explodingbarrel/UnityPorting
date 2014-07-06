@@ -1,4 +1,4 @@
-﻿
+﻿#if NETFX_CORE
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Reflection;
 using System;
 using System.Runtime.InteropServices;
 
-namespace LegacySystem.Collections
+namespace System.Collections
 {
     /**
      * An ArrayList is just a dynamic array of generic objects... very close to List<> which is supported in Metro
@@ -26,5 +26,4 @@ namespace LegacySystem.Collections
         public ArrayList(IEnumerable enumerable) : base(enumerable.Cast<object>()) { }
     }
 }
-
-
+#endif

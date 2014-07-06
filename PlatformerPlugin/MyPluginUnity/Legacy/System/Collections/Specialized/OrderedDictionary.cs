@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if NETFX_CORE
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Collections;
@@ -10,7 +11,7 @@ using System.Linq;
 /**
  * Modified code from http://stackoverflow.com/questions/2629027/no-generic-implementation-of-ordereddictionary
  */
-namespace LegacySystem.Collections.Specialized {
+namespace System.Collections.Specialized {
 
     public interface IOrderedDictionary<TKey, TValue> : IDictionary<TKey, TValue>, IOrderedDictionary {
         new TValue this[int index] { get; set; }
@@ -506,3 +507,4 @@ namespace LegacySystem.Collections.Specialized {
         public object Current { get { return Entry; } }
     }
 }
+#endif

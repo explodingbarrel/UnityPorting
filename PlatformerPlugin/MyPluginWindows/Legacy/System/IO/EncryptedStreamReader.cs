@@ -1,11 +1,12 @@
-﻿using System;
+﻿#if NETFX_CORE
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using Windows.ApplicationModel.Store;
 
-namespace LegacySystem.IO
+namespace System.IO
 {
     internal class EncryptedStreamReader : StreamReader
     {
@@ -23,7 +24,7 @@ namespace LegacySystem.IO
             {
                 while ((line = ReadLine()) != null)
                 {
-                    sb.Append(EncryptionProvider.Decrypt(line, CurrentApp.AppId.ToString()));
+                    sb.Append(System.IO.EncryptionProvider.Decrypt(line, CurrentApp.AppId.ToString()));
                 }
             }
             catch { }
@@ -32,3 +33,4 @@ namespace LegacySystem.IO
         }
     }
 }
+#endif

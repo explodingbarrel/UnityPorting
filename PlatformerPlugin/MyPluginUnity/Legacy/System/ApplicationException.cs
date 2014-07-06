@@ -1,12 +1,12 @@
-﻿using System;
+﻿#if NETFX_CORE
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections;
 
-namespace LegacySystem
+namespace System
 {
-
     public class ApplicationException : Exception
     {
         private Exception _ex;
@@ -82,3 +82,4 @@ namespace LegacySystem
         }
     }
 }
+#endif

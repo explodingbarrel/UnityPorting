@@ -1,9 +1,10 @@
-﻿using System;
+﻿#if NETFX_CORE
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace LegacySystem
+namespace System
 {
     [Flags]
     public enum BindingFlags
@@ -241,3 +242,4 @@ namespace LegacySystem
 
     }
 }
+#endif

@@ -1,5 +1,4 @@
-﻿
-
+﻿#if NETFX_CORE
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Reflection;
 using System;
 using System.Runtime.InteropServices;
 
-namespace LegacySystem.Collections
+namespace System.Collections
 {
     /**
      * Implement Hashtable like it exists in .NET 2.0... or at least the part I'm using
@@ -186,3 +185,4 @@ namespace LegacySystem.Collections
         }
     }
 }
+#endif

@@ -1,5 +1,5 @@
 ﻿using System.IO.IsolatedStorage;
-using Legacy.Encryption;
+using System.Encryption;
 
 namespace MyPlugin.Facebook
 {

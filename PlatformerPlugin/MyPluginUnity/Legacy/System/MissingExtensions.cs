@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿#if NETFX_CORE
+using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Reflection;
 using System;
 using System.Runtime.InteropServices;
 
-namespace LegacySystem
+namespace System
 {
     /**
      * Helpers for missing functions of classes, turned into extensions instead...
@@ -56,4 +57,5 @@ namespace LegacySystem
 
     }
 }
+#endif
 
