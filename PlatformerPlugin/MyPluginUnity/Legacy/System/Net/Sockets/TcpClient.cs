@@ -10,9 +10,7 @@ using System.Threading.Tasks;
 using Windows.Networking;
 using Windows.Networking.Sockets;
 using Windows.Storage.Streams;
-#endif
 
-#if NETFX_CORE || WINDOWS_PHONE
 namespace System.Net.Sockets
 {
 	public class TcpClient
@@ -100,6 +98,25 @@ namespace System.Net.Sockets
 		{
 			var thread = WriteToOutputStreamAsync(bytes);
 			thread.Wait();
+		}
+
+		public bool Connected
+		{
+			get { return _socket != null; }
+		}
+
+		public bool NoDelay
+		{
+			get; set;
+		}
+
+		public virtual IAsyncResult BeginConnect(IPAddress address, int port, AsyncCallback requestCallback, object state)
+		{
+			return null;
+		}
+
+		public virtual void EndConnect(IAsyncResult asyncResult)
+		{
 		}
 	}
 }
